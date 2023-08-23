@@ -9,7 +9,7 @@ basename  = LinWave    # problem ID: basename of output filenames
 
 <mesh>
 nghost    = 4          # Number of ghost cells
-nx1       = 128        # Number of zones in X1-direction
+nx1       = 128        # Number of zones in X1-direction               #> RADIO 128,256,512,1024,2048
 x1min     = 0.0        # minimum value of X1
 x1max     = 1.0        # maximum value of X1
 ix1_bc    = periodic   # inner-X1 boundary flag
@@ -35,9 +35,9 @@ nx3       = 1          # Number of cells in each MeshBlock, X3-dir
 <time>
 evolution  = dynamic   # dynamic/kinematic/static
 integrator = rk3       # time integration algorithm
-cfl_number = 0.3       # The Courant, Friedrichs, & Lewy (CFL) Number
+cfl_number = 0.3       # The Courant, Friedrichs, & Lewy (CFL) Number       #> SCALE 0:1.2:0.1
 nlim       = -1        # cycle limit (no limit if <0)
-tlim       = 5.0       # time limit
+tlim       = 5.0       # time limit                                         #> SCALE 1:100:1
 ndiag      = 1         # cycles between diagostic output
 
 <hydro>
@@ -48,9 +48,9 @@ gamma       = 1.66666666667   # gamma = C_p/C_v
 
 <problem>
 pgen_name = linear_wave # problem generator name
-wave_flag = 0           # Wave family number ([0-4] for adiabatic hydro, [0-6] for MHD)
-amp       = 1.0e-3      # Wave Amplitude
-vflow     = 0.0         # background flow velocity
+wave_flag = 0           # Wave family number ([0-4] for adiabatic hydro      #> RADIO  0,1,2,3,4
+amp       = 1e-3        # Wave Amplitude                                     #> RADIO  1e-3,1e-2,0.1,0.2,0.3,0.4,0.5
+vflow     = 0.0         # background flow velocity                           #> SCALE  0:1:0.05
 along_x1  = true        # set to 'true' for wave along x1-axis
 
 <output1>
