@@ -6,3 +6,5 @@ and MHD on a Cartesian grid with AMR.
 
 Athena-miniK relies on the Kokkos library for performance portability.  This allows
 it to be run on almost any architecture.
+
+The full version is available here:   https://gitlab.com/theias/hpc/jmstone/athena-parthenon/athenak
